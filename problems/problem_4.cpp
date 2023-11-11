@@ -1,8 +1,8 @@
 
-string problemSolution4( string &macAddress) {
+std::string problemSolution4( std::string &macAddress) {
     // write your code here
     int cnt=0;
-    string result;
+    std::string result;
     for(int i=0;i<18;i=i+3){
         if (macAddress[i]=='F' && macAddress[i+1]=='F'){
             cnt=cnt+2;
