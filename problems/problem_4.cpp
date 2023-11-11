@@ -1,5 +1,5 @@
 
-string problemSolution4( string macAddress) {
+string problemSolution4( string &macAddress) {
     // write your code here
     int cnt=0;
     string result;
