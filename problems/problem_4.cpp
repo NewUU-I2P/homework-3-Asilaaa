@@ -1,5 +1,6 @@
-#include <iostream>
-std::string problemSolution4( std::string &macAddress) {
+#include <string>
+#include <sstream>
+std::string problemSolution4(const std::string &macAddress) {
     // write your code here
     int cnt=0;
     std::string result;
