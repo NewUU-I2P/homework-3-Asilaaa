@@ -7,12 +7,12 @@ std::string problemSolution4(const std::string &macAddress) {
     int cnt=0;
     string result;
     for(int i=0;i<18;i=i+3){
-        if (macAddress[i]=='F' && macAddress[i+1]=='F'){
+        if (&macAddress[i]=='F' && &macAddress[i+1]=='F'){
             cnt=cnt+2;
         }
         else{
-            if(isdigit(macAddress[1])){
-                if(macAddress[1]%2==0) {
+            if(isdigit(&macAddress[1])){
+                if(&macAddress[1]%2==0) {
                     result = "unicast";
                     break;
                 }
@@ -21,7 +21,7 @@ std::string problemSolution4(const std::string &macAddress) {
                 }
             }
             else{
-                switch (macAdress[1]) {
+                switch (&macAdress[1]) {
             case 'A':
                 cout <<"Unicast" <<endl;
                 break;
