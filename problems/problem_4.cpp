@@ -1,18 +1,18 @@
 #include <string>
-#include <iostream>
+#include <sstream>
 using namespace std;
 
-string problemSolution4( string macAddress) {
+std::string problemSolution4(const std::string &macAddress) {
     // write your code here
     int cnt=0;
     string result;
     for(int i=0;i<18;i=i+3){
-        if (macAddress[i]=='F' && macAddress[i+1]=='F'){
+        if (&macAddress[i]=='F' && &macAddress[i+1]=='F'){
             cnt=cnt+2;
         }
         else{
-            if(isdigit(macAddress[1])){
-                if(macAddress[1]%2==0) {
+            if(isdigit(&macAddress[1])){
+                if(&macAddress[1]%2==0) {
                     result = "unicast";
                     break;
                 }
@@ -21,30 +21,12 @@ string problemSolution4( string macAddress) {
                 }
             }
             else{
-                switch (macAddress[1]) {
-                    case 'A':
-                        cout <<"Unicast" <<endl;
-                        break;
-                    case 'C':
-                        cout <<"Unicast" <<endl;
-                        break;
-                    case 'E':
-                        cout <<"Unicast" <<endl;
-                        break;
-                    case 'B':
-                        cout <<"Multicast" <<endl;
-                        break;
-                    case 'D':
-                        cout <<"Multicast" <<endl;
-                        break;
-                    case 'F':
-                        cout <<"Multicast" <<endl;
-                        break;
-                    default:
-                        cout <<"Mac Adress is not valid(" <<endl;
+                if((char (&macAddress[1])+1)%2==0){
+                    result = "unicast";break;
                 }
-                break;
-
+                else{
+                    result = "multicast";break;
+                }
             }
 
         }
