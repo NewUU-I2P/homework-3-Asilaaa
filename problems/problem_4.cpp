@@ -21,12 +21,29 @@ std::string problemSolution4(const std::string &macAddress) {
                 }
             }
             else{
-                if((char (macAddress[1])+1)%2==0){
-                    result = "unicast";break;
-                }
-                else{
-                    result = "multicast";break;
-                }
+                switch (macAdress[1]) {
+            case 'A':
+                cout <<"Unicast" <<endl;
+                break;
+            case 'C':
+                cout <<"Unicast" <<endl;
+                break;
+            case 'E':
+                cout <<"Unicast" <<endl;
+                break;
+            case 'B':
+                cout <<"Multicast" <<endl;
+                break;
+            case 'D':
+                cout <<"Multicast" <<endl;
+                break;
+            case 'F':
+                cout <<"Multicast" <<endl;
+                break;
+            default:
+                cout <<"Mac Adress is not valid(" <<endl;
+        }
+                break;
             }
 
         }
