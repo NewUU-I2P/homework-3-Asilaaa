@@ -13,11 +13,11 @@ std::string problemSolution4(const std::string &macAddress) {
         else{
             if(isdigit(macAddress[1])){
                 if(macAddress[1]%2==0) {
-                    result = "unicast";
+                    result = "Unicast";
                     break;
                 }
                 else{
-                    result = "multicast";break;
+                    result = "Multicast";break;
                 }
             }
             else{
@@ -45,7 +45,7 @@ std::string problemSolution4(const std::string &macAddress) {
         }
     }
     if (cnt==12){
-        result = "broadcast";
+        result = "Broadcast";
     }
 
     return result;
