@@ -7,12 +7,12 @@ std::string problemSolution4(const std::string &macAddress) {
     int cnt=0;
     string result;
     for(int i=0;i<18;i=i+3){
-        if (&macAddress[i]=='F' && &macAddress[i+1]=='F'){
+        if (macAddress[i]=='F' && macAddress[i+1]=='F'){
             cnt=cnt+2;
         }
         else{
-            if(isdigit(&macAddress[1])){
-                if(&macAddress[1]%2==0) {
+            if(isdigit(macAddress[1])){
+                if(macAddress[1]%2==0) {
                     result = "unicast";
                     break;
                 }
@@ -21,27 +21,27 @@ std::string problemSolution4(const std::string &macAddress) {
                 }
             }
             else{
-                switch (&macAdress[1]) {
+                switch (macAddress[1]) {
             case 'A':
-                cout <<"Unicast" <<endl;
+                result = "Unicast";
                 break;
             case 'C':
-                cout <<"Unicast" <<endl;
+                result = "Unicast";
                 break;
             case 'E':
-                cout <<"Unicast" <<endl;
+                result = "Unicast";
                 break;
             case 'B':
-                cout <<"Multicast" <<endl;
+                result = "Multicast";
                 break;
             case 'D':
-                cout <<"Multicast" <<endl;
+                result = "Multicast";
                 break;
             case 'F':
-                cout <<"Multicast" <<endl;
+                result = "Multicast";
                 break;
             default:
-                cout <<"Mac Adress is not valid(" <<endl;
+                result = "Mac Adress is not valid(";
         }
                 break;
             }
@@ -56,4 +56,8 @@ std::string problemSolution4(const std::string &macAddress) {
 
     // make use of control flow statements
     // return result;
+}
+int main() {
+    std::cout<<problemSolution4("FF:FF:FF:FF:FF:FF");
+    return 0;
 }
