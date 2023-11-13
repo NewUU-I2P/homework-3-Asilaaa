@@ -23,20 +23,16 @@ std::string problemSolution4(const std::string &macAddress) {
             else{
                 switch (macAddress[1]) {
             case 'A':
-                result = "Unicast";
-                break;
+
             case 'C':
-                result = "Unicast";
-                break;
+
             case 'E':
                 result = "Unicast";
                 break;
             case 'B':
-                result = "Multicast";
-                break;
+
             case 'D':
-                result = "Multicast";
-                break;
+
             case 'F':
                 result = "Multicast";
                 break;
@@ -56,8 +52,4 @@ std::string problemSolution4(const std::string &macAddress) {
 
     // make use of control flow statements
     // return result;
-}
-int main() {
-    std::cout<<problemSolution4("FF:FF:FF:FF:FF:FF");
-    return 0;
 }
